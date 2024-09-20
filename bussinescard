@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: #455a64;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .title {
+            font-size: 16px;
+            color: #ccc;
+        }
+        /* Üstteki CALL ve EMAIL kutuları */
+        .icon-row-top {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Aralarına boşluk ekledik */
+        }
+        .icon-row-top a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            background-color: #607d8b;
+            padding: 15px 25px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 4px;
+            text-align: center;
+        }
+        .icon-row-top a:hover {
+            background-color: #78909c;
+        }
+        /* Alttaki üç kutu (DIRECTIONS, WHATSAPP, SAVE CONTACT) */
+        .icon-row-bottom {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 4px;
+        }
+        .icon-row-bottom a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            background-color: #607d8b;
+            padding: 15px 25px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 4px;
+            text-align: center;
+        }
+        .icon-row-bottom a:hover {
+            background-color: #78909c;
+        }
+        .contact-info {
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            line-height: 2;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .contact-info p:last-child {
+            border-bottom: none;
+        }
+        /* SMS butonu */
+        .cta-button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 24px;
+            text-align: center;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .cta-button:hover {
+            background-color: #f50057;
+        }
+
+        /* Responsive tasarım */
+        @media (max-width: 768px) {
+            .icon-row-top, .icon-row-bottom {
+                flex-direction: column;
+            }
+        }
+
+        /* Buton animasyonu */
+        a {
+            transition: transform 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">BXLANE INTERNATIONAL</div>
+    <div class="name">Sezai YAVAŞ</div>
+    <div class="title">Manager/Bestuurder</div>
+    
+    <!-- CALL ve EMAIL yatayda yan yana -->
+    <div class="icon-row-top">
+        <a href="tel:+32491255954">CALL</a>
+        <a href="mailto:bxlaneinternational@gmail.com">EMAIL</a>
+    </div>
+    
+    <!-- DIRECTIONS, WHATSAPP ve SAVE CONTACT altta yatayda yan yana -->
+    <div class="icon-row-bottom">
+        <a href="https://www.google.com/maps/place/Excelsiorlaan+31+Zaventem+1930+Belgium" target="_blank">DIRECTIONS</a>
+        <a href="https://api.whatsapp.com/send?phone=32491255954" target="_blank">WHATSAPP</a>
+        <a href="#" onclick="addToContacts()">SAVE CONTACT</a>
+    </div>
+</div>
+
+<div class="contact-info">
+    <p><strong>TVA BE:</strong> 0740.900.450</p>
+    <p><strong>IBAN:</strong> BE63 1431 2019 3108</p>
+    <p><strong>BIC:</strong> GEBABEBB</p>
+    <p><strong>Phone:</strong> +32 491 25 59 54</p>
+    <p><strong>Email:</strong> <a href="mailto:bxlaneinternational@gmail.com">bxlaneinternational@gmail.com</a></p>
+    <p><strong>Company:</strong> BXLANE INTERNATIONAL BUSINESS MANAGEMENT AND CONSULTING BV.</p>
+    <p><strong>Address:</strong> Excelsiorlaan 31, Zaventem, Vlaams Gewest 1930, Belgium</p>
+</div>
+
+<a href="sms:+32491255954" class="cta-button">+</a>
+
+<script>
+    // Rehbere ekleme fonksiyonu (simülasyon)
+    function addToContacts() {
+        alert("This contact will be added to your address book.");
+    }
+</script>
+
+</body>
+</html>
